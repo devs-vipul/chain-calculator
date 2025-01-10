@@ -18,38 +18,35 @@ export function FunctionCard({
   const [currentEquation, setCurrentEquation] = useState(equation);
 
   useEffect(() => {
-    setCurrentEquation(currentEquation);
-  }, [currentEquation]);
+    setCurrentEquation(equation);
+  }, [equation]);
 
   const handleChange = (newValue: string) => {
     setCurrentEquation(newValue);
-
-    if (/^[0-9x\s\+\-\*\/\^]*$/.test(newValue)) {
-      onChange(newValue);
-    }
+    onChange(newValue);
   };
 
   return (
     <div className="relative bg-white rounded-lg p-6 shadow-md w-[280px]">
       <div className="flex items-center gap-2 mb-4">
-        <h2 className="text-gray-600">Function: {id}</h2>
+        <h2 className="text-custom-muted font-semibold">Function: {id}</h2>
       </div>
 
       <div className="space-y-4">
         <div>
-          <label className="block text-sm font-semibold text-dark mb-1">
+          <label className="block text-sm font-semibold text-custom-dark mb-1">
             Equation
           </label>
           <input
             type="text"
             value={currentEquation}
             onChange={(e) => handleChange(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
+            className="w-full p-2 border border-custom-gray rounded-md"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-dark mb-1">
+          <label className="block text-sm font-semibold text-custom-dark mb-1">
             Next function
           </label>
           <select
