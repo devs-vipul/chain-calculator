@@ -66,7 +66,7 @@ export function Calculator() {
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="relative mx-auto max-w-[1200px]">
-        <div className="grid grid-cols-[auto_1fr_1fr_1fr] gap-8 items-start">
+        <div className="flex flex-col lg:flex-none lg:grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-start">
           {/* Initial Input */}
           <div className="p-4 rounded-lg relative">
             <div className="text-xs font-medium text-white bg-custom-orange rounded-full px-3 py-1 mb-2">
@@ -81,7 +81,7 @@ export function Calculator() {
           </div>
 
           {/* Function Cards */}
-          <div className="col-span-3 grid grid-cols-3 gap-8">
+          <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {functions.map((func) => (
               <FunctionCard
                 key={func.id}
