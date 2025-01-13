@@ -69,7 +69,7 @@ export function Calculator() {
         <div className="flex flex-col lg:flex-none lg:grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-start">
           {/* Initial Input */}
           <div className="p-4 rounded-lg relative">
-            <div className="text-xs font-medium text-white bg-custom-orange rounded-full px-3 py-1 mb-2">
+            <div className="max-w-max text-xs font-medium text-white bg-custom-orange rounded-full px-3 py-1 mb-2">
               Initial value of x
             </div>
             <input
