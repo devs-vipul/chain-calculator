@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FunctionCard } from "./function-card";
 import { regexValidators } from "@/utils/regex-validators";
 import { Snackbar } from "./snackbar";
+import { ConnectionDot } from "./connection-dots";
 
 const initialFunctions = [
   { id: 1, equation: "x^2", nextFunction: 2 },

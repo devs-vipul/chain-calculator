@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { ConnectionDot } from "./connection-dots";
 
 interface FunctionCardProps {
   id: number;
@@ -61,6 +62,8 @@ export function FunctionCard({
           </select>
         </div>
       </div>
+      <ConnectionDot type="input" />
+      <ConnectionDot type="output" />
     </div>
   );
 }
